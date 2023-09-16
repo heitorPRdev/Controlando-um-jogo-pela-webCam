@@ -2,6 +2,12 @@
 Nesse jogo feito no python nós controlamos um quadrado com as mãos.Usamos a WebCam para controla-lo.
 As bibliotecas usadas são: **OPENCV**, **MEDIAPIPE** e **PYGAME**.
 
+## Tabela de comados
+|comandos|SIgnificado|
+-------- |-----------|
+|  🤚    |pular|
+|  ✊    |ficar parado|
+
 ## Como Fiz
 
 A Pygame permite nós criarmos o jogo e facilitar a implementação do Open-Cv e Mediapipe.E existe um codego base, que é:
