@@ -14,7 +14,7 @@ pos_cy = 580
 pos_espx = 700
 pos_espy = 530
 vel_esp = 10
-vel_jump = 50
+vel_jump = 100
 
 cont_jump = 0
 janela = pygame.display.set_mode((800,600))
@@ -51,11 +51,11 @@ while janela_aberta:
         if pontos:
             for ded_X in dedos:
                 if pontos[ded_X][1] < pontos[ded_X-2][1]:
-                    print('jump')
+
                     cont_jump += 1
                     if cont_jump > 2:
                         y -= vel_jump
-                        print(cont_jump)
+
                         cont_jump = 0
                     else:
                         y = 530
@@ -66,6 +66,9 @@ while janela_aberta:
     pos_espx -= vel_esp
     if pos_espx == -30:
         pos_espx = 850
+    if x + 50 > pos_espx and y + 50 > pos_espy:
+        y += 1000
+
 
 
     janela.blit(background, (0, 0))
@@ -74,7 +77,8 @@ while janela_aberta:
     janela.blit(player, (x, y))
     pygame.display.update()
     cv2.imshow('imagem', img)
+
+
 pygame.quit()
 webcam.release()
-
 
